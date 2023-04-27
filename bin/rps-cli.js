@@ -33,7 +33,7 @@ if (args.r || args.rules){
     process.exit(0);
 }
 
-if(args._.length === 0){
+if(args._.length == 0){
     console.log(JSON.stringify(rpsNoArg())); 
 }
 else{
