@@ -37,10 +37,13 @@ if (args.r || args.rules){
     - Rock CRUSHES Scissors`);
 
     process.exit(0);
-
-
-    
+  
 }
+
+var results = rpsls(args._[0]);
+
+console.log(JSON.stringify(results));
+process.exit(0)
 
 
 
