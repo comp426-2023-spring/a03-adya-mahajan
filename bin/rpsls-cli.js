@@ -35,8 +35,11 @@ if (args.r || args.rules){
     - Paper DISPROVES Spock
     - Spock VAPORIZES Rock
     - Rock CRUSHES Scissors`);
-    
+
     process.exit(0);
+
+
+    
 }
 
 
