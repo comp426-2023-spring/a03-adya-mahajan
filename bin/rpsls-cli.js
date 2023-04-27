@@ -1,6 +1,7 @@
 // files that run when linked to node-rpsls
 
-import {rpsls} from "../lib/rpsls.js"
+import {rpslsNoArg} from "../lib/rpsls.js"
+import {rpslsArg} from "../lib/rpsls.js"
 import minimist from "minimist";
 
 const args = minimist(process.argv.slice(2));
@@ -40,9 +41,14 @@ if (args.r || args.rules){
   
 }
 
-var results = rpsls(args._[0]);
+if(args._.length === 0){
+    console.log(JSON.stringify(rpslsNoArg())); 
+}
+else{
+    console.log(JSON.stringify(rpslsArg(args._[0])));
+}
 
-console.log(JSON.stringify(results));
+
 process.exit(0)
 
 

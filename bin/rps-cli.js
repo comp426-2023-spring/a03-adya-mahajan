@@ -1,6 +1,8 @@
 // files that run when linked to node-rps
 
-import {rps} from "../lib/rpsls.js"
+import {rpsNoArg} from "../lib/rpsls.js"
+import {rpsArg} from "../lib/rpsls.js"
+
 import minimist from "minimist";
 
 const args = minimist(process.argv.slice(2));
@@ -31,9 +33,14 @@ if (args.r || args.rules){
     process.exit(0);
 }
 
-var results = rps(args._[0]);
+if(args._.length === 0){
+    console.log(JSON.stringify(rpsNoArg())); 
+}
+else{
+    console.log(JSON.stringify(rpsArg(args._[0])));
+}
 
-console.log(JSON.stringify(results));
+
 process.exit(0)
 
 

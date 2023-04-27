@@ -1,8 +1,9 @@
 {
-  "name": "node-rpsls",
+  "name": "rpsls",
   "version": "1.0.0",
   "description": "this installable Node.js module package contains command line games (rock, paper, scissors, & rock, paper, scissors, lizard, spock)",
   "main": "./lib/rpsls.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,11 +18,23 @@
   },
   "homepage": "https://github.com/comp426-2023-spring/a03-adya-mahajan#readme",
   "dependencies": {
-    "minimist": "1.2.8"
+    "minimist": "^1.2.8"
   },
   "bin": {
-    "node-rps": "./bin/rps-cli.js",
+    "node-rps": "bin/rps-cli.js",
     "node-rpsls": "rpsls-cli.js"
-  }
-
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "keywords": [
+    "installable",
+    "Node.js",
+    "module",
+    "package",
+    "with",
+    "contains",
+    "cli",
+    "games"
+  ]
 }
