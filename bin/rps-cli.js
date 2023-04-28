@@ -1,4 +1,4 @@
-// files that run when linked to node-rps
+#!/usr/bin/env node
 
 import {rpsNoArg} from "../lib/rpsls.js"
 import {rpsArg} from "../lib/rpsls.js"
